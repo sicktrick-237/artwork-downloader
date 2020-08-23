@@ -9,6 +9,7 @@ from mutagen.id3 import ID3, APIC, error
 from mutagen.mp3 import MP3
 
 global cwd
+cwd = os.getcwd()  # Defaults to Current Working Directory
 
 
 def write_artwork(original_name, track_name):
@@ -61,7 +62,7 @@ def embed_artwork():
 
 
 if __name__ == '__main__':
-    global cwd
+    # global cwd
     try:
         path = sys.argv[1]
         if path:

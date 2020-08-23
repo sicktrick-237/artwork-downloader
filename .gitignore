@@ -6,3 +6,5 @@
 .idea/modules.xml
 .idea/vcs.xml
 __pycache__/artwork_downloader.cpython-37.pyc
+__pycache__/youtube_search_engine.cpython-37.pyc
+__pycache__/tracklist_parser.cpython-37.pyc
