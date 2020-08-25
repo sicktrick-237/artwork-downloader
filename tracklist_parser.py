@@ -100,8 +100,9 @@ def tracklistCleaner(tracklistname, tracklist):  # Removing ID Tracks from 1001 
     return tracklistname, cleanedTracks
 
 
-def generateTracklist():
-    TURL = input("Enter 1001Tracklist or MixesDB URL : ")  # Main input point
+def generateTracklist(TURL=None):
+    if not TURL:
+        TURL = input("Enter 1001Tracklist or MixesDB URL : ")  # Main input point
 
     if 'https://www.1001tracklists.com/tracklist/' in TURL:
         print("\nFetching Tracklist.....")

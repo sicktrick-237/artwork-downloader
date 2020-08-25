@@ -22,7 +22,15 @@ class BypassedSearch(object):
             generatedURL = url+trackName
             self.driver.get(generatedURL)
             time.sleep(3)
-            divs = self.driver.find_element_by_xpath("//body/ytd-app/div[@id='content']/ytd-page-manager[@id='page-manager']/ytd-search[@class='style-scope ytd-page-manager']/div[@id='container']/ytd-two-column-search-results-renderer[@class='style-scope ytd-search']/div[@id='primary']/ytd-section-list-renderer[@class='style-scope ytd-two-column-search-results-renderer']/div[@id='contents']/ytd-item-section-renderer[@class='style-scope ytd-section-list-renderer']/div[3]")
+            divs = self.driver.find_element_by_xpath("//body/ytd-app/div[@id='content']/ytd-page-manager["
+                                                     "@id='page-manager']/ytd-search[@class='style-scope "
+                                                     "ytd-page-manager']/div["
+                                                     "@id='container']/ytd-two-column-search-results-renderer["
+                                                     "@class='style-scope ytd-search']/div["
+                                                     "@id='primary']/ytd-section-list-renderer[@class='style-scope "
+                                                     "ytd-two-column-search-results-renderer']/div["
+                                                     "@id='contents']/ytd-item-section-renderer[@class='style-scope "
+                                                     "ytd-section-list-renderer']/div[3]")
             content = self.driver.execute_script("return arguments[0].innerHTML;", divs)
         else:
             print("URL not Generated")
