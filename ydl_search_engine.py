@@ -6,3 +6,6 @@ def search_using_ydl(search_term):
     query = 'youtube-dl --get-id "%s"' % search
     video_id = subprocess.run(query, stdout=subprocess.PIPE).stdout.decode('utf-8')
     return video_id
+
+
+print(search_using_ydl("Coldabank & Freedo - I JUST WANNA DANCE"))
